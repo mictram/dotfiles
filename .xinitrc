@@ -39,4 +39,5 @@ setxkbmap -option caps:escape &
 #xscreensaver --no-splash &
 nextcloud --background &
 picom &
+dunst &
 exec qtile
