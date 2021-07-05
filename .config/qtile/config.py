@@ -24,7 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from os import system
+import os
+import subprocess
 from typing import List  # noqa: F401
 
 from libqtile import bar, hook, layout, widget
@@ -38,15 +39,21 @@ ARCH_BLUE = "#1793d0"
 # Set a wallpaper
 def wallpaper():
     """Set a wallpaper"""
-    path = "~/Nextcloud/Pictures/wallpapers/the-citidel.jpg"
-    system("feh --bg-scale " + path)
+    path = "~/.config/qtile/the-citidel.jpg"
+    os.system("feh --bg-scale " + path)
 
 
 # Do things on startup
-@hook.subscribe.startup
+# @hook.subscribe.startup
+# def autostart():
+#    """Things to do at startup"""
+
+
+@hook.subscribe.startup_once
 def autostart():
-    """Things to do at startup"""
     wallpaper()
+    home = os.path.expanduser("~")
+    subprocess.Popen([home + "/.config/qtile/autostart.sh"])
 
 
 mod = "mod4"
@@ -108,13 +115,28 @@ workspaces = [
         "key": "3",
         "matches": [Match(wm_class="signal-desktop"), Match(wm_class="discord")],
     },
-    {"name": "阮₄", "key": "4", "matches": [Match(wm_class="plexamp")]},
+    {
+        "name": "ﰝ ₄",
+        "key": "4",
+        "matches": [Match(wm_class="plexamp"), Match(wm_class="strawberry")],
+    },
     {
         "name": "漣₅",
         "key": "5",
-        "matches": [Match(wm_class="gwe"), Match(wm_class="virt-manager")],
+        "matches": [
+            Match(wm_class="gwe"),
+            Match(wm_class="virt-manager"),
+            Match(wm_class="yubioath-desktop"),
+            Match(wm_class="pavucontrol"),
+        ],
     },
-    {"name": "- ₆", "key": "6"},
+    {
+        "name": " ₆",
+        "key": "6",
+        "matches": [
+            Match(wm_class="nextcloud"),
+        ],
+    },
     {"name": "- ₇", "key": "7"},
     {"name": "- ₈", "key": "8"},
     {"name": "- ₉", "key": "9"},

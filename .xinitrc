@@ -36,8 +36,4 @@ fi
 twm &
 xclock -geometry 50x50-1+1 &
 setxkbmap -option caps:escape &
-#xscreensaver --no-splash &
-nextcloud --background &
-picom &
-dunst &
-exec qtile
+exec qtile start
