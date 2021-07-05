@@ -34,6 +34,7 @@ from libqtile.utils import guess_terminal
 
 ARCH_BLUE = "#1793d0"
 
+
 # Set a wallpaper
 def wallpaper():
     """Set a wallpaper"""
@@ -102,7 +103,11 @@ keys = [
 workspaces = [
     {"name": " ₁", "key": "1", "matches": [Match(wm_class="brave")]},
     {"name": " ₂", "key": "2", "matches": [Match(wm_class="alacritty")]},
-    {"name": " ₃", "key": "3", "matches": [Match(wm_class="signal-desktop")]},
+    {
+        "name": " ₃",
+        "key": "3",
+        "matches": [Match(wm_class="signal-desktop"), Match(wm_class="discord")],
+    },
     {"name": "阮₄", "key": "4", "matches": [Match(wm_class="plexamp")]},
     {
         "name": "漣₅",
