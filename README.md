@@ -10,3 +10,6 @@ make install
 make update
 make install
 ```
+
+## screenshot
+![](./screenshot.png)
