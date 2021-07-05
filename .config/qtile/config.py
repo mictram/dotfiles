@@ -231,7 +231,7 @@ screens = [
                 ),
                 # widget.TextBox("default config", name="default"),
                 # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                widget.Systray(),
+                widget.Systray(padding=15, icon_size=22),
                 widget.CheckUpdates(
                     colour_have_updates="#00ff00",
                     colour_no_updates=ARCH_BLUE,
