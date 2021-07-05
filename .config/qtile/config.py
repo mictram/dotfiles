@@ -101,8 +101,8 @@ keys = [
 ]
 
 workspaces = [
-    {"name": " ₁", "key": "1", "matches": [Match(wm_class="brave")]},
-    {"name": " ₂", "key": "2", "matches": [Match(wm_class="alacritty")]},
+    {"name": " ₁", "key": "1", "matches": [Match(wm_class="alacritty")]},
+    {"name": "爵₂", "key": "2", "matches": [Match(wm_class="brave")]},
     {
         "name": " ₃",
         "key": "3",
