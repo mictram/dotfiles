@@ -131,13 +131,17 @@ workspaces = [
         ],
     },
     {
-        "name": " ₆",
+        "name": " ₆",
         "key": "6",
+        "matches": [Match(wm_class="steam"), Match(wm_class="lutris")],
+    },
+    {
+        "name": " ₇",
+        "key": "7",
         "matches": [
             Match(wm_class="nextcloud"),
         ],
     },
-    {"name": "- ₇", "key": "7"},
     {"name": "- ₈", "key": "8"},
     {"name": "- ₉", "key": "9"},
 ]
