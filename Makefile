@@ -4,6 +4,7 @@ install:
 		--exclude 'LICENSE' \
 		--exclude '*.md' \
 		--exclude '__pycache__' \
+		--exclude 'libinput' \
 		./ ~/;
 
 	pushd ~/.vim; \
