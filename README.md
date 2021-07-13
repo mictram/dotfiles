@@ -1,5 +1,16 @@
 # dotfiles
 
+## dependencies
+- alacritty
+- dunst
+- feh
+- picom
+- qtile
+- python3
+- starship
+- vim
+- libinput
+
 ## setup
 ```bash
 make install
