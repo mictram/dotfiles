@@ -17,7 +17,12 @@ start_app() {
     fi
 }
 
-start_app "picom"
+# start_app "picom"
+if cmd_exist "picom" ; then
+    __kill "picom"
+    __start picom --experimental-backends
+fi
+
 start_app "brave"
 start_app "alacritty"
 start_app "discord"
