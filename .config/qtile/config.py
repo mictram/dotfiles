@@ -104,6 +104,12 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key(
+        [mod, "control"],
+        "o",
+        lazy.spawn("xscreensaver-command -lock"),
+        desc="Lock screen",
+    ),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
@@ -116,7 +122,7 @@ workspaces = [
         "matches": [Match(wm_class="signal-desktop"), Match(wm_class="discord")],
     },
     {
-        "name": "ﰝ ₄",
+        "name": "蓼₄",
         "key": "4",
         "matches": [Match(wm_class="plexamp"), Match(wm_class="strawberry")],
     },

@@ -4,12 +4,13 @@
 - alacritty
 - dunst
 - feh
-- picom-git (support for experimental backends)
+- libinput
+- picom-git
 - qtile
 - python3
 - starship
 - vim
-- libinput
+- xscreensaver
 
 ## setup
 ```bash
