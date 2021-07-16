@@ -4,7 +4,7 @@
 - alacritty
 - dunst
 - feh
-- picom
+- picom-git (support for experimental backends)
 - qtile
 - python3
 - starship
