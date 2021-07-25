@@ -17,21 +17,32 @@ start_app() {
     fi
 }
 
+run() {
+  if ! pgrep $1 ;
+  then
+    $@&
+  fi
+}
+
+# set capslock key to escape
+setxkbmap -option caps:escape &
+
+
 # start_app "picom"
 if cmd_exist "picom" ; then
-    __kill "picom"
-    __start picom --experimental-backends
+    __kill "picom" &
+    __start picom --experimental-backends &
 fi
 
-start_app "brave"
-start_app "alacritty"
-start_app "discord"
-start_app "signal-desktop"
-start_app "nextcloud"
-start_app "yubioath-desktop"
-start_app "pavucontrol"
-start_app "virt-manager"
-start_app "gwe"
-start_app "strawberry"
-start_app "steam"
-start_app "lutris"
+#start_app "brave" &
+#start_app "alacritty" &
+#start_app "discord" &
+#start_app "signal-desktop" &
+start_app "nextcloud" &
+start_app "yubioath-desktop" &
+start_app "pavucontrol" &
+start_app "virt-manager" &
+start_app "gwe" &
+#start_app "strawberry" &
+#start_app "steam" &
+#start_app "lutris" &
